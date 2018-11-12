@@ -2,7 +2,7 @@ $('#form-query').submit(function (e) {
 	if ($('#input-query').val()) {
 		$.ajax({
 	   		type: 'GET',
-			url: '/myapp/get_recommendations?query=' + $('#input-query').val(),
+			url: '/get-recommendations?query=' + $('#input-query').val(),
 			success: function(data) {
 				if (data.error) {
 					console.log('Error')
