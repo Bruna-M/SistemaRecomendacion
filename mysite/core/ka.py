@@ -42,7 +42,7 @@ def get_modules_list(sciencelist):
 			(sciencelist[i]['relative_url'] == '/science/chemistry') or
 			(sciencelist[i]['relative_url'] == '/science/organic-chemistry') or
 			(sciencelist[i]['relative_url'] == '/science/biology') or
-			(sciencelist[i]['relative_url'] == '/science/health-and-medicine')): 
+			(sciencelist[i]['relative_url'] == '/science/health-and-medicine')):
 			hsblist = hsblist + sciencelist[i]['children']
 
 	return hsblist

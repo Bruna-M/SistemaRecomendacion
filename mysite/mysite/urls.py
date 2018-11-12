@@ -20,6 +20,6 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('delete-db', views.delete_db),
+    path('clear-db', views.clear_db),
     path('get-recommendations', views.get_recommendations),
 ]

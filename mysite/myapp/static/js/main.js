@@ -7,7 +7,7 @@ $('#form-query').submit(function (e) {
 				if (data.error) {
 					console.log('Error')
 				} else {
-					if (data.result.article_id.length == 0) {
+					if ($.isEmptyObject(data.result.article_id)) {
 						$('#table-results').hide();
 					} else {
 						var html = '';

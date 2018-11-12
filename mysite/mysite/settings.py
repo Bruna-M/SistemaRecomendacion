@@ -26,6 +26,7 @@ SECRET_KEY = '7v30iy&q68-!$^y&moep3i5r#@2c$38ns1knh*luc5y!n^@3=q'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     'sisrec.herokuapp.com'
 ]
 

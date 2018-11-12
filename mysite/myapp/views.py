@@ -8,7 +8,7 @@ import json
 def index(request):
 	return render(request, 'index.html')
 
-def delete_db(request):
+def clear_db(request):
 	delete_db()
 
 	return HttpResponse('La base de datos fue borrada.')
