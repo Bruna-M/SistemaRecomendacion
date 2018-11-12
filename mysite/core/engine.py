@@ -6,6 +6,7 @@ import core.dao as dao
 import core.ka as ka
 #import ka
 import json
+import nltk
 from nltk.corpus import stopwords
 import numpy as np
 import operator
@@ -19,6 +20,7 @@ import sqlite3
 # Variables globales
 tfidf_vectorizer = None
 nearest_neigbors = None
+nltk.download('stopwords')
 stop_words =  stopwords.words('spanish')
 token_pattern = '(?u)\\b[a-zA-Z]\\w\\w+\\b'
 metric = 'cosine'
