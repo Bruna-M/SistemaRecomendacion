@@ -25,7 +25,9 @@ SECRET_KEY = '7v30iy&q68-!$^y&moep3i5r#@2c$38ns1knh*luc5y!n^@3=q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'sisrec.herokuapp.com'
+]
 
 
 # Application definition
