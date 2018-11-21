@@ -452,6 +452,10 @@ legend {
   box-sizing: border-box;
 }
 
+#spinner {
+  padding-top: 50px;
+}
+
 #tableresults {
     border-collapse: collapse;
     width: 100%;
@@ -545,6 +549,11 @@ legend {
   padding: 10px 32px;
   font-size: 16px;
   color: #555;
+}
+
+.s003 form .inner-form .input-field input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .s003 form .inner-form .input-field input.placeholder {
@@ -666,13 +675,18 @@ legend {
   width: 16px;
 }
 
-.s003 form .inner-form .input-field.third-wrap .btn-search:hover {
+.s003 form .inner-form .input-field.third-wrap .btn-search:hover:not(:disabled) {
   background: #0198f6;
 }
 
 .s003 form .inner-form .input-field.third-wrap .btn-search:focus {
   outline: 0;
   box-shadow: none;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 992px) {

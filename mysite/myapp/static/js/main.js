@@ -1,5 +1,9 @@
 $('#form-query').submit(function (e) {
 	if ($('#input-query').val()) {
+		$('#spinner').show();
+		$("#input-query").prop("disabled", true);
+		$("#submit-button").prop("disabled", true);
+
 		$.ajax({
 	   		type: 'GET',
 			url: '/get-recommendations?query=' + $('#input-query').val(),
@@ -8,6 +12,7 @@ $('#form-query').submit(function (e) {
 					console.log('Error')
 				} else {
 					if ($.isEmptyObject(data.result.article_id)) {
+						
 						$('#table-results').hide();
 					} else {
 						var html = '';
@@ -28,6 +33,10 @@ $('#form-query').submit(function (e) {
 						$('#table-results').show();
 					}
 				}
+
+				$('#spinner').hide();
+				$("#input-query").prop("disabled", false);
+				$("#submit-button").prop("disabled", false);
 			}
 	 	});
 	}
