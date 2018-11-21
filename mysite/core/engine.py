@@ -24,7 +24,7 @@ nltk.download('stopwords')
 stop_words =  stopwords.words('spanish')
 token_pattern = '(?u)\\b[a-zA-Z]\\w\\w+\\b'
 metric = 'cosine'
-n_neighbors = 20
+n_neighbors = 5
 tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words, token_pattern=token_pattern)
 nearest_neigbors = NearestNeighbors(metric=metric, n_neighbors=n_neighbors, algorithm='brute')
 
