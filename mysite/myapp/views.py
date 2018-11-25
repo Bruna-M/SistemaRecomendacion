@@ -1,5 +1,5 @@
 from core.dao import delete_db
-from core.engine import get_predictions
+from core.engine import get_predictions, get_weights
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
@@ -24,3 +24,18 @@ def get_recommendations(request):
 		response['result'] = json.loads(get_predictions(query))
 
 	return HttpResponse(json.dumps(response), content_type='text/json')
+
+def get_report(request):
+	word = request.GET.get('word', '')
+	response = {}
+	response['error'] = False
+
+	if word == '':
+		response['error'] = True
+	else:
+		response['result'] = json.loads(get_weights(word))
+
+	return HttpResponse(json.dumps(response), content_type='text/json')
+
+def report(request):
+	return render(request, 'report.html')

@@ -22,4 +22,6 @@ urlpatterns = [
     path('', views.index),
     path('clear-db', views.clear_db),
     path('get-recommendations', views.get_recommendations),
+    path('get-report', views.get_report),
+    path('report', views.report),
 ]

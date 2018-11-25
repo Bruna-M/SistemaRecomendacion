@@ -57,3 +57,14 @@ def get_predictions(query):
 	fit(data, 'content')
 
 	return predict(data, query.split(' ')).to_json()
+
+def get_weights(word):
+	data = get_data()
+	datos_por_tags = tfidf_vectorizer.fit_transform(data['content'])
+	weights_json = pd.DataFrame(datos_por_tags.todense(), columns=tfidf_vectorizer.get_feature_names(), index=range(len(data))).T.filter(like=word, axis=0).to_json()
+	articles_json = data.iloc[:, [1, 3]].to_json()
+	result = {}
+	result['weights'] = json.loads(weights_json)
+	result['articles'] = json.loads(articles_json)
+	
+	return json.dumps(result)

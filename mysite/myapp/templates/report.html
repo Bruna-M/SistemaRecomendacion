@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="/static/css/report.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form id="form-word">
+                <input id="input-word" type="text" placeholder="Palabra" />
+                <input id="input-minimum-tfidf" type="number" step="0.01">
+                <button id="submit-button" type="submit">Buscar</button>
+                <span id="spinner" style="display: none;"><i class="fas fa-cog fa-spin"></i></span>
+            </form>    
+        </div>
+        <div class="container" id="section-results"></div>
+        <script src="/static/js/report.js" type="text/javascript"></script>
+    </body>
+</html>
